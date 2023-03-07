@@ -1,0 +1,37 @@
+show user;
+--create user coffeen identified by 123456;
+--grant connect,resource,dba to coffeen;
+--conn coffeen;
+
+drop table product;
+drop SEQUENCE PNO_SEQ;
+create table product(
+p_no varchar2(50), --상품번호
+p_name varchar2(100), --상품명
+p_price number, --가격
+p_cnt number, --재고
+p_color varchar2(20), --색상
+p_size varchar2(20), --사이즈
+p_filesrc varchar2(100), --첨부파일
+p_date date, --입고일
+p_category varchar2(20), --카테고리
+p_info varchar2(1500)); --상품정보
+
+commit;
+CREATE SEQUENCE PNO_SEQ INCREMENT BY 1 START WITH 100;
+
+drop table orderlist;
+
+create table orderlist(
+ord_num varchar2(100), --주문번호
+m_id varchar2(100), --아이디**
+ord_date date, --주문일자
+ord_pay varchar2(100), --결제형태
+ord_totprice number, --총액
+ord_state varchar2(100)); --처리상태(결제완료,취소요청,취소완료,상품준비중,배송완료,구매확정)
+
+create table orderdetail(
+ordd_num varchar2(100), --상품주문번호 
+ord_num varchar2(100), --주문번호**
+p_no varchar2(100), --상품번호**
+ordd_cnt number); --주문수량
