@@ -35,3 +35,18 @@ ordd_num varchar2(100), --상품주문번호
 ord_num varchar2(100), --주문번호**
 p_no varchar2(100), --상품번호**
 ordd_cnt number); --주문수량
+
+
+create table member(
+m_id varchar2(30), --회원아이디
+m_pw_sha varchar2(100), --회원비밀번호 sha
+m_pw_rha varchar2(100), --회원비밀번호 rha
+m_name varchar2(30),
+m_tel varchar2(20),
+m_name2 varchar2(30),
+m_email varchar2(50),
+m_grade varchar2(30),
+m_age number,
+m_gender varchar2(10),
+m_cash number,
+m_filesrc varchar2(100));
