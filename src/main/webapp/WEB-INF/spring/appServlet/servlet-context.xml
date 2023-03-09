@@ -31,7 +31,14 @@
 		<beans:property name="password" value="123456"/>
 	</beans:bean>
 	
-
+	<beans:bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<beans:property name="dataSource" ref="dataSource"/>
+		<beans:property name="mapperLocations" value="classpath:com/tech/coffeen/dao/mapper/*.xml"/>  <!-- 쿼리를모아놓는파일 위치 -->
+	</beans:bean>
+	
+	<beans:bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+		<beans:constructor-arg index="0" ref="sqlSessionFactory"/>
+	</beans:bean>
 	
 	
 </beans:beans>
