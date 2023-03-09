@@ -16,10 +16,10 @@ public class MemberController {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	@RequestMapping("/joinform")
+	@RequestMapping("/joinForm")
 	public String joinform(Model model) {
 		System.out.println("--*--MemberController/joinform--*--");
-		return "/member/joinform";
+		return "/member/joinForm";
 	}
 	
 }
