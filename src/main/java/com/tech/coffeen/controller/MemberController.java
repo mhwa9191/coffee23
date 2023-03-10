@@ -22,4 +22,10 @@ public class MemberController {
 		return "/member/joinForm";
 	}
 	
+	@RequestMapping("/loginForm")
+	public String loginForm(Model model) {
+		System.out.println("--*--MemberController/loginForm--*--");
+		return "/member/loginForm";
+	}
+	
 }
