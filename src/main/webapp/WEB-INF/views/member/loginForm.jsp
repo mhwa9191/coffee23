@@ -5,8 +5,8 @@
 <head>
 <meta charset="UTF-8">
   <title>Sign in</title>
-  <link rel="stylesheet" href="../resources/css/loginStyle.css">
   <script type="text/javascript" src="../resources/js/jquery-trans.js"></script>
+  <link rel="stylesheet" href="../resources/css/loginStyle.css">
 </head>
 <body>
 <div class="container">
@@ -16,6 +16,7 @@
 	        <h1>register</h1>
 	        <form autocomplete="off">
 				<input type="text" placeholder="username">
+				<input type="tel" placeholder="tel">
 				<input type="email" placeholder="email">
 				<input type="password" placeholder="password">
 				<input type="password" placeholder="confirm password">
@@ -50,7 +51,6 @@
 		</div>
 	</div>
 </div>
-
 
      
 </body>

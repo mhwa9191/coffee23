@@ -1,12 +1,15 @@
-$('#signup').click(function() {
-	alert("dkdkdk");
-	$('.pinkbox').css('transform', 'translateX(80%)');
-	$('.signin').addClass('nodisplay');
-	$('.signup').removeClass('nodisplay');
-});
 
-$('#signin').click(function() {
-	$('.pinkbox').css('transform', 'translateX(0%)');
-	$('.signup').addClass('nodisplay');
-	$('.signin').removeClass('nodisplay');
-});
+window.onload = function() {
+	document.getElementById("signup").onclick = function () {
+		document.getElementsByClassName("pinkbox")[0].style.transform="translateX(80%)";
+		document.getElementsByClassName("signin")[0].classList.add('nodisplay');
+		document.getElementsByClassName("signup")[0].classList.remove('nodisplay');
+	};
+	
+	document.getElementById("signin").onclick = function () {
+		document.getElementsByClassName("pinkbox")[0].style.transform="translateX(0%)";
+		document.getElementsByClassName("signup")[0].classList.add('nodisplay');
+		document.getElementsByClassName("signin")[0].classList.remove('nodisplay');
+	};
+};
+
