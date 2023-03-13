@@ -14,12 +14,12 @@
 	    <div class="pinkbox">
 	      <div class="signup nodisplay">
 	        <h1>register</h1>
-	        <form autocomplete="off">
-				<input type="text" placeholder="username">
-				<input type="tel" placeholder="tel">
-				<input type="email" placeholder="email">
-				<input type="password" placeholder="password">
-				<input type="password" placeholder="confirm password">
+	        <form action="join" method="post" enctype="multipart/form-data" name="joinForm" onsubmit="return checkinfo();">
+				<input type="text" placeholder="id" name="m_id" id="m_id">
+				<input type="tel" placeholder="tel" name="m_tel">
+				<input type="email" placeholder="email" name="m_email">
+				<input type="password" placeholder="password" name="m_pw">
+				<input type="password" placeholder="confirm password" name="m_pw_conf">
 				<button class="button submit">create account </button>
 	        </form>
 	      </div>

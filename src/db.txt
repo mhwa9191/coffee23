@@ -50,3 +50,13 @@ m_age number, --회원연령
 m_gender varchar2(10), --회원성별
 m_cash number, --회원캐시
 m_filesrc varchar2(100)); --회원사진
+--member 2차
+create table member(
+m_id varchar2(30), --회원아이디
+m_pw_sha varchar2(100), --회원비밀번호 sha
+m_pw_rha varchar2(100), --회원비밀번호 rha
+m_tel varchar2(20), --회원전화번호
+m_email varchar2(50), --회원이메일
+m_grade varchar2(30), --회원등급
+m_cash number, --회원캐시
+m_filesrc varchar2(100) default null); --회원사진
