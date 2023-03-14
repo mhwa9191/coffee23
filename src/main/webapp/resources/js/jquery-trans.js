@@ -13,11 +13,11 @@ window.onload = function() {
 	};
 };
 
-
+// 회원가입시 확인
 function checkinfo(){
-	alert("aa");
+	//alert("aa");
 	var m_id = joinForm.m_id.value;
-	alert(m_id);
+	//alert(m_id);
 	var m_pw = joinForm.m_pw.value;
 	var m_tel = joinForm.m_tel.value;
 	var m_email = joinForm.m_email.value;
@@ -58,6 +58,38 @@ function checkinfo(){
 	}else{
 		return true;
 		alert("가입진행신호")
+	}
+	
+}
+
+// 로그인시 확인
+function check_id_pw(){
+	alert("로그인버튼눌렀나");
+	let loginform_input_id = document.getElementById("login_m_id").value; //input id값
+	let loginform_input_pw = document.getElementById("login_m_pw").value; //input password값
+	if(!loginform_input_id){ //id를 입력하지않으면
+		alert("아이디를입력하세요")
+		return false;
+	}else if(!loginform_input_pw){ //pw를 입력하지않으면
+		alert("비밀번호를입력하세요")
+		return false;
+	}else {
+		return true;
+		$.ajax({
+			 type:'POST',
+			 url:'../member/login',
+			 data:"login_m_id="+loginform_input_id+"&login_m_pw="+loginform_input_pw,
+			/*  dataType:'text', */
+					success:function(result){				
+				if(result==0){ 
+					alert("아이디비밀번호를확인하세요")
+				}else if(result==1){ 
+					alert("로그인성공");
+					window.location.href="../home" //로그인성공시 메인페이지로이동
+
+				}
+			}
+		})
 	}
 	
 }

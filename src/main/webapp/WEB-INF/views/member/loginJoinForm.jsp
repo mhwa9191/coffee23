@@ -25,9 +25,9 @@
 	      </div>
 	      <div class="signin">
 	        <h1>sign in</h1>
-	        <form class="more-padding" autocomplete="off">
-				<input type="text" placeholder="username">
-				<input type="password" placeholder="password">
+	        <form class="more-padding" action="login" method="post" onsubmit="return check_id_pw();">
+				<input type="text" placeholder="username" name="login_m_id" id="login_m_id">
+				<input type="password" placeholder="password" name="login_m_pw" id="login_m_pw">
 				<div class="checkbox">
 				  <input type="checkbox" id="remember" /><label for="remember">remember me</label>
 				</div>

@@ -7,4 +7,8 @@
 		INSERT INTO MEMBER(M_ID,M_PW_SHA,M_PW_RSA,M_TEL,M_EMAIL,M_GRADE,M_CASH)
 		VALUES(#{param1},#{param4},#{param5},#{param2},#{param3},'NEW',100000)
 	</insert>
+	
+	<select id="getsharsa" resultType="com.tech.coffeen.dto.MemberDto">
+		SELECT * FROM MEMBER WHERE M_ID=#{param1}
+	</select>
 </mapper>
