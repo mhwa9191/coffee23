@@ -9,6 +9,8 @@ import org.springframework.ui.Model;
 
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
+import com.tech.coffeen.crypt.CryptoUtil;
+import com.tech.coffeen.dao.Member;
 import com.tech.coffeen.service.CoffeeServiceInerface;
 
 public class JoinService implements CoffeeServiceInerface{
@@ -26,6 +28,7 @@ public class JoinService implements CoffeeServiceInerface{
 		Map<String, Object> map = model.asMap();
 		HttpServletRequest request = (HttpServletRequest) map.get("request");
 		
+		CryptoUtil crypt = (CryptoUtil) map.get("crypt");
 				
 		String uploadPath=request.getSession().getServletContext().getRealPath("/");
 	    System.out.println("uploadpathhhhh:"+uploadPath);
@@ -48,6 +51,25 @@ public class JoinService implements CoffeeServiceInerface{
 		
 		System.out.println(m_id+"::"+m_pw+"::"+m_tel+"::"+m_email);
 		
+		String sha="";
+		try {
+			sha=CryptoUtil.sha512(m_pw);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		System.out.println("sha512방식 암호화 : "+sha);
+		
+		String key2=sha;
+		String encryStr = "";
+		try {
+			encryStr = CryptoUtil.encryptAES256(m_pw, key2);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		System.out.println("양방향암호화 : "+encryStr);
+		
+		Member dao = sqlSession.getMapper(Member.class);
+		dao.join(m_id,m_tel,m_email,sha,encryStr);	
 	}
 
 }
