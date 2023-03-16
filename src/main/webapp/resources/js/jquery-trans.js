@@ -64,31 +64,36 @@ function checkinfo(){
 
 // 로그인시 확인
 function check_id_pw(){
-	alert("로그인버튼눌렀나");
-	let loginform_input_id = document.getElementById("login_m_id").value; //input id값
-	let loginform_input_pw = document.getElementById("login_m_pw").value; //input password값
+//	alert("로그인버튼눌렀나");
+	let loginform_input_id = document.getElementById("login_input-id").value; //input id값
+	let loginform_input_pw = document.getElementById("login_input-pw").value; //input password값
 	if(!loginform_input_id){ //id를 입력하지않으면
 		alert("아이디를입력하세요")
-		return false;
+		//return false;
 	}else if(!loginform_input_pw){ //pw를 입력하지않으면
 		alert("비밀번호를입력하세요")
-		return false;
+		//return false;
 	}else {
-		return true;
 		$.ajax({
 			 type:'POST',
 			 url:'../member/login',
 			 data:"login_m_id="+loginform_input_id+"&login_m_pw="+loginform_input_pw,
-			/*  dataType:'text', */
-					success:function(result){				
+			 dataType:'text',
+			 success:function(result){
+				 		alert("ajax");
+						alert("값확인"+result);
 				if(result==0){ 
-					alert("아이디비밀번호를확인하세요")
+					alert("아이디비밀번호를확인하세요");
+					window.location.href="../member/loginJoinForm";
 				}else if(result==1){ 
 					alert("로그인성공");
-					window.location.href="../home" //로그인성공시 메인페이지로이동
-
+					window.location.href="../home"; //로그인성공시 메인페이지로이동
 				}
-			}
+			},
+			error:function(e){        
+		            console.log(e);
+		            alert("로그인에 실패하셨습니다.");
+		    }
 		})
 	}
 	
