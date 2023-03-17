@@ -73,6 +73,7 @@ function check_id_pw(){
 	}else if(!loginform_input_pw){ //pw를 입력하지않으면
 		alert("비밀번호를입력하세요")
 	}else {
+		console.log("ajax");
 		alert("else부분");
 		$.ajax({ // 작동 오류해결필요
 			 type:'POST',
@@ -94,8 +95,7 @@ function check_id_pw(){
 		            console.log(e);
 		            alert("로그인에 실패하셨습니다.");
 		    }
-		})
-		alert("확인");
+		});
 	}
 	
 }

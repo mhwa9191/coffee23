@@ -6,7 +6,9 @@
 <meta charset="UTF-8">
   <title>Sign in</title>
   <script type="text/javascript" src="../resources/js/jquery-trans.js"></script>
+
   <link rel="stylesheet" href="../resources/css/loginStyle.css">
+  
 </head>
 <body>
 <div class="container">
