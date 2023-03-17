@@ -62,6 +62,7 @@ function checkinfo(){
 	
 }
 
+
 // 로그인시 확인
 function check_id_pw(){
 //	alert("로그인버튼눌렀나");
@@ -69,12 +70,11 @@ function check_id_pw(){
 	let loginform_input_pw = document.getElementById("login_input-pw").value; //input password값
 	if(!loginform_input_id){ //id를 입력하지않으면
 		alert("아이디를입력하세요")
-		//return false;
 	}else if(!loginform_input_pw){ //pw를 입력하지않으면
 		alert("비밀번호를입력하세요")
-		//return false;
 	}else {
-		$.ajax({
+		alert("else부분");
+		$.ajax({ // 작동 오류해결필요
 			 type:'POST',
 			 url:'../member/login',
 			 data:"login_m_id="+loginform_input_id+"&login_m_pw="+loginform_input_pw,
@@ -87,7 +87,7 @@ function check_id_pw(){
 					window.location.href="../member/loginJoinForm";
 				}else if(result==1){ 
 					alert("로그인성공");
-					window.location.href="../home"; //로그인성공시 메인페이지로이동
+					window.location.href="../"; //로그인성공시 메인페이지로이동
 				}
 			},
 			error:function(e){        
@@ -95,6 +95,7 @@ function check_id_pw(){
 		            alert("로그인에 실패하셨습니다.");
 		    }
 		})
+		alert("확인");
 	}
 	
 }

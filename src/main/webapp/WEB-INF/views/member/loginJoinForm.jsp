@@ -25,13 +25,13 @@
 	      </div>
 	      <div class="signin">
 	        <h1>sign in</h1>
-	        <form class="more-padding" action="login" method="post" onsubmit="return check_id_pw();">
+	        <form class="more-padding" method="post">
 				<input type="text" placeholder="username" name="login_input-id" id="login_input-id">
 				<input type="password" placeholder="password" name="login_input-pw" id="login_input-pw">
 				<div class="checkbox">
 				  <input type="checkbox" id="remember" /><label for="remember">remember me</label>
 				</div>
-				<button class="button submit">login</button>
+				<button class="button submit" onclick="check_id_pw()">login</button>
 	        </form>
 	      </div>
 	    </div>
