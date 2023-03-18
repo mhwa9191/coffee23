@@ -1,0 +1,17 @@
+body{
+	background-image:url("../img/main/coffee-beans.jpg");
+	background-size: 100%; 
+}
+.main-body {
+	background-color: #F6E1C3;
+	color: #A84448;
+	display: flex;
+}
+.main-body-title{
+	margin: 20px auto;
+}
+.main-body-title-member {
+	width: 10%; /* 사이즈수정필요 */
+	color: #7A3E65;
+	margin: 20px 10px 0 auto;
+}

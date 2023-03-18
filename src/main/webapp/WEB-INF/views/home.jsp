@@ -5,15 +5,17 @@
 <html>
 <head>
 	<title>Home</title>
+	<link rel="stylesheet" href="./resources/css/mainStyle.css">
 </head>
 <body>
-<h1>
-	Hello world!  
-</h1>
-
-<P>  The time on the server is ${serverTime}. </P>
-
-<a href="./member/loginJoinForm">로그인&회원가입</a>
+<div class="main-body">
+	<div class="main-body-title">
+		<h3>Coffee & caffeine</h3>
+	</div>
+	<div class="main-body-title-member">
+		<a href="./member/loginJoinForm">로그인&회원가입</a>
+	</div>
+</div>
 
 
 </body>
