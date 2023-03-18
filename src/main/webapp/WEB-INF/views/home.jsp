@@ -5,7 +5,7 @@
 <html>
 <head>
 	<title>Home</title>
-	<link rel="stylesheet" href="./resources/css/mainStyle.css">
+	<link rel="stylesheet" href="./resources/css/homeStyle.css">
 </head>
 <body>
 <div class="main-body">
@@ -13,7 +13,7 @@
 		<h3>Coffee & caffeine</h3>
 	</div>
 	<div class="main-body-title-member">
-		<a href="./member/loginJoinForm">로그인&회원가입</a>
+		<a href="./member/loginJoinForm">Login&Join</a>
 	</div>
 </div>
 

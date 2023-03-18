@@ -7,11 +7,11 @@ body{
 	color: #A84448;
 	display: flex;
 }
-.main-body-title{
-	margin: 20px auto;
-}
+.main-body-title{width: 90%;}
+.main-body-title > h3{text-align: center;}
 .main-body-title-member {
-	width: 10%; /* 사이즈수정필요 */
-	color: #7A3E65;
 	margin: 20px 10px 0 auto;
 }
+a{text-decoration: none; color: #7A3E65;}
+a:hover{color: #3f3f3f; font-weight: bold;}
+a::visited{color: #7A3E65;}
