@@ -74,15 +74,13 @@ function check_id_pw(){
 		alert("비밀번호를입력하세요")
 	}else {
 		console.log("ajax");
-		alert("else부분");
-		$.ajax({ // 작동 오류해결필요
+		$.ajax({ // 작동 오류해결필요 -- ajax/libs/ script 추가 + function사용하는 button의 type button으로 지정하여 해결
 			 type:'POST',
 			 url:'../member/login',
 			 data:"login_m_id="+loginform_input_id+"&login_m_pw="+loginform_input_pw,
 			 dataType:'text',
 			 success:function(result){
-				 		alert("ajax");
-						alert("값확인"+result);
+						alert("ajax 값확인"+result);
 				if(result==0){ 
 					alert("아이디비밀번호를확인하세요");
 					window.location.href="../member/loginJoinForm";

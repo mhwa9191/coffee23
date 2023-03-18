@@ -61,6 +61,7 @@ public class MemberController {
 		Map<String, Object> map = model.asMap();
 		int logincheck_result = (Integer) map.get("logincheck_result"); //ajax return으로 data 줘야해서 model을 다시 풀음
 		
+		System.out.println("logincheck_result : "+logincheck_result);
 		return logincheck_result;
 	}
 	

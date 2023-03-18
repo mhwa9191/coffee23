@@ -151,7 +151,9 @@
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis</artifactId>
-			<version>3.4.1</version>
+			<version>3.5.2</version>
+			<!-- 오류 Illegal reflective access by org.apache.ibatis.reflection.Reflector -->
+			<!-- 3.4.1 에서 3.5.2 로 버전 변경 -->
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
 		<dependency>

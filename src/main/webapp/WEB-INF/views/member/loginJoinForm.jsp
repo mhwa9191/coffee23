@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
   <title>Sign in</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> <!-- ajax 사용시 필요 -->
   <script type="text/javascript" src="../resources/js/jquery-trans.js"></script>
 
   <link rel="stylesheet" href="../resources/css/loginStyle.css">
@@ -27,13 +28,13 @@
 	      </div>
 	      <div class="signin">
 	        <h1>sign in</h1>
-	        <form class="more-padding" method="post">
+	        <form class="more-padding">
 				<input type="text" placeholder="username" name="login_input-id" id="login_input-id">
 				<input type="password" placeholder="password" name="login_input-pw" id="login_input-pw">
 				<div class="checkbox">
 				  <input type="checkbox" id="remember" /><label for="remember">remember me</label>
 				</div>
-				<button class="button submit" onclick="check_id_pw()">login</button>
+				<button class="button submit" onclick="check_id_pw()" type="button">login</button> <!-- type button 지정하지 않으면 오류발생 -->
 	        </form>
 	      </div>
 	    </div>
