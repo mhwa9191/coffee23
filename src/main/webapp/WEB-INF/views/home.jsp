@@ -9,9 +9,7 @@
 </head>
 <body>
 <div class="main-body">
-	<div class="main-body-title">
-		<h3>Coffee & caffeine</h3>
-	</div>
+<jsp:include page="/WEB-INF/views/header.jsp"></jsp:include>
 	<div class="main-body-title-member">
 		<a href="./member/loginJoinForm">Login&Join</a>
 	</div>
