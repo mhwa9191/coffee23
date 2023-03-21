@@ -1,15 +1,16 @@
-body{
+#home-body{
 	background-image:url("../img/main/coffee-beans.jpg");
 	background-size: 100%; 
 }
-.main-body {
-	background-color: #F6E1C3;
+.main-header {
+	background-color: #EAC7CC;
 	color: #A84448;
 	display: flex;
+	border-radius: 5px;
 }
-.main-body-title{width: 90%;}
-.main-body-title > h3{text-align: center;}
-.main-body-title-member {
+.main-header-title{width: 90%;}
+.main-header-title > h3{text-align: center;}
+.main-header-title-member {
 	margin: 20px 10px 0 auto;
 }
 a{text-decoration: none; color: #7A3E65;}

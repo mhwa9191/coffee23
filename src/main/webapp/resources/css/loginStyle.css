@@ -147,7 +147,7 @@ form {
 }
 .more-padding input {
   padding: 12px;
-  border-color:#000;
+/*   border-color:#000; */
 }
 .more-padding .submit {
   margin-top: 45px;
@@ -192,7 +192,7 @@ input:focus::placeholder { /* 포커스됐을 때 placeholder */
 
 label {
   font-family: 'Open Sans', sans-serif;
-  color: #EAC7CC; /* darken(#EAC7CC, 20%) */
+  color: #f6f6f6; /* darken(#EAC7CC, 20%) */
   font-size: 0.8em;
   letter-spacing: 1px;
 }
@@ -211,6 +211,6 @@ input[type=checkbox] {
 }
 
 .checkbox input[type="checkbox"]:checked + label {
-  color: #EAC7CC; /* darken(#EAC7CC, 20%) */
+  color: #f6f6f6; /* darken(#EAC7CC, 20%) */
   transition: .5s all ease;
 }

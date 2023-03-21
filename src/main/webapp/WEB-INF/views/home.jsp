@@ -7,13 +7,11 @@
 	<title>Home</title>
 	<link rel="stylesheet" href="./resources/css/homeStyle.css">
 </head>
-<body>
-<div class="main-body">
+<body id="home-body">
+
 <jsp:include page="/WEB-INF/views/header.jsp"></jsp:include>
-	<div class="main-body-title-member">
-		<a href="./member/loginJoinForm">Login&Join</a>
-	</div>
-</div>
+
+
 
 
 </body>
