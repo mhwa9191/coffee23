@@ -36,6 +36,10 @@
 		<location>/error/viewsError.jsp</location>
 	</error-page>
 	<error-page>
+		<error-code>500</error-code>
+		<location>/error/viewsError.jsp</location>
+	</error-page>
+	<error-page>
 		<exception-type>java.lang.NullPointerException</exception-type>
 		<location>/error/viewsError.jsp</location>
 	</error-page>

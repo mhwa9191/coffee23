@@ -43,7 +43,12 @@ public class MemberController {
 		model.addAttribute("request",request);
 		coffeeServiceInerface = new JoinService(sqlSession);
 		coffeeServiceInerface.execute(model);
-		return "/member/loginJoinForm";
+		
+		Map<String, Object> map = model.asMap();
+		int joinResult = (Integer) map.get("joinResult");
+		System.out.println("가입여부 확인 값"+joinResult);
+		
+		return joinResult==0? "/error/joinError":"/member/loginJoinForm";
 	}
 	
 	//로그인기능

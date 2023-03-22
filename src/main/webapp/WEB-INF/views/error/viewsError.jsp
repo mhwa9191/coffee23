@@ -1,5 +1,6 @@
 <%@ page contentType = "text/html; charset=utf-8" %>
 <%@ page isErrorPage = "true" %>
+<%@ page trimDirectiveWhitespaces="true" %>s
 <html>
 <head><title>에러 발생</title></head>
 <body>
