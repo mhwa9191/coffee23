@@ -8,11 +8,16 @@
 	display: flex;
 	border-radius: 5px;
 }
-.main-header-title{width: 90%;}
+.main-header-title{width: 88%;}
 .main-header-title > h3{text-align: center;}
-.main-header-title-member {
-	margin: 20px 10px 0 auto;
+.main-header-title-member, .main-header-title-member_in {
+	margin: 5px 5px;
 }
-a{text-decoration: none; color: #7A3E65;}
+a{text-decoration: none; color: #7A3E65; vertical-align: middle;}
 a:hover{color: #3f3f3f; font-weight: bold;}
 a::visited{color: #7A3E65;}
+
+.main-header-title-member_in img{
+	width: 30px;
+	margin: 10px 5px;
+}

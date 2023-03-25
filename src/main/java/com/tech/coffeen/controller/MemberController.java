@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.tech.coffeen.crypt.CryptoUtil;
 import com.tech.coffeen.member.JoinService;
+import com.tech.coffeen.member.LogOutService;
 import com.tech.coffeen.member.LoginService;
 import com.tech.coffeen.service.CoffeeServiceInerface;
 
@@ -70,4 +71,14 @@ public class MemberController {
 		return logincheck_result;
 	}
 	
+	//로그아웃
+	@RequestMapping("/logout")
+	public String logout(HttpServletRequest request,Model model) {
+		System.out.println("--*--MemberController/logout()--*--");
+	
+		coffeeServiceInerface = new LogOutService(httpSession);
+		coffeeServiceInerface.execute(model);
+
+		return "redirect:/";
+	}
 }

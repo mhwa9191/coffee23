@@ -80,7 +80,7 @@ function check_id_pw(){
 			 data:"login_m_id="+loginform_input_id+"&login_m_pw="+loginform_input_pw,
 			 dataType:'text',
 			 success:function(result){
-						alert("ajax 값확인"+result);
+//						alert("ajax 값확인"+result);
 				if(result==0){ 
 					alert("아이디비밀번호를확인하세요");
 					window.location.href="../member/loginJoinForm";
