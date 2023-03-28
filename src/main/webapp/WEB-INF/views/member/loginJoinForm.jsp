@@ -1,19 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
   <title>Sign in</title>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> <!-- ajax 사용시 필요 -->
-  <script type="text/javascript" src="../resources/js/jquery-trans.js"></script>
+  <script type="text/javascript" src="http://localhost:9100/coffeen/_coffee/js/jquery-trans.js"></script>
 
-  <link rel="stylesheet" href="../resources/css/loginStyle.css">
+  <link rel="stylesheet" href="http://localhost:9100/coffeen/_coffee/css/loginStyle.css">
   
 </head>
 <body>
-<jsp:include page="/WEB-INF/views/header.jsp"></jsp:include>
+<jsp:include page="/WEB-INF/views/layout/header.jsp"></jsp:include>
+		<c:if test="${empty sessionScope.loginid }">
+
 <div class="container">
 	<div class="welcome">
 	    <div class="pinkbox">
@@ -43,20 +45,23 @@
 	    <div class="leftbox">
 			<h2 class="title"><span>Coffee</span>&<br>caffeine</h2>
 			<p class="desc">pick your perfect <span>Coffee</span></p>
-			<img class="flower smaller" src="../resources/img/loginjoin/coffee_latte.png" alt="coffee_latte" border="0">
+			<img class="flower smaller" src="http://localhost:9100/coffeen/_coffee/img/loginjoin/coffee_latte.png" alt="coffee_latte" border="0">
 			<p class="account">have an account?</p>
 			<button class="button" id="signin">login</button>
 	    </div>
 	    <div class="rightbox">
 			<h2 class="title"><span>Coffee</span>&<br>caffeine</h2>
 			<p class="desc"> pick your perfect <span>Coffee</span></p>
-			<img class="flower" src="../resources/img/loginjoin/coffee-flower.jpg"/>
+			<img class="flower" src="http://localhost:9100/coffeen/_coffee/img/loginjoin/coffee-flower.jpg"/>
 			<p class="account">don't have an account?</p>
 			<button class="button" id="signup">sign up</button>
 		</div>
 	</div>
 </div>
-
+</c:if>
+<c:if test="${not empty sessionScope.loginid }">
+Hello
+</c:if>
      
 </body>
 </html>

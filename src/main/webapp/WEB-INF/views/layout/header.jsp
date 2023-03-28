@@ -6,29 +6,29 @@
 <head>
 <meta charset="UTF-8">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> <!-- include 사용하려고 -->
-	<link rel="stylesheet" href="../resources/css/homeStyle.css">
+	<link rel="stylesheet" href="http://localhost:9100/coffeen/_coffee/css/homeStyle.css">
 <title>Insert title here</title>
 </head>
 <body>
 <div class="main-header">
-	<div class="main-header-title">
-		<h3>
+	
+		<h3 class="main-header-title">
 			<a href="/coffeen">Coffee & caffeine</a>
 		</h3>
-	</div>
-	<div class="main-header-title-member">
+	
 		<c:if test="${empty sessionScope.loginid }">
-		<a href="/coffeen/member/loginJoinForm">Login&Join</a>
+	<ul class="main-header-title-member">
+		<li><a href="/coffeen/member/loginJoin">Login&Join</a></li>
+	</ul>
 		</c:if>
-	</div>
-	<div class="main-header-title-member_in">
 		<c:if test="${not empty sessionScope.loginid }">
-		<a href="/coffeen/member/logout">LogOut</a>
-		<a href="/coffeen/member/myPage">
-			<img alt="member-flaticon" src="resources/img/loginjoin/user.png" >
-		</a>
+	<ul class="main-header-title-member_in">
+		<li><a href="/coffeen/member/logout">LogOut</a></li>
+		<li><a href="/coffeen/member/myPage">
+			<img alt="member-flaticon" src="http://localhost:9100/coffeen/_coffee/img/loginjoin/user.png" >
+		</a></li>
+	</ul>
 	</c:if>
-	</div>
 </div>
 
 </body>

@@ -30,9 +30,9 @@ public class MemberController {
 	@Autowired
 	private HttpSession httpSession;
 	//로그인 회원가입화면
-	@RequestMapping("/loginJoinForm")
+	@RequestMapping("/loginJoin")
 	public String loginForm(Model model) {
-		System.out.println("--*--MemberController/loginForm--*--");
+		System.out.println("--*--MemberController/loginJoin--*--");
 		return "/member/loginJoinForm";
 	}
 	

@@ -19,7 +19,7 @@ color:#7A3E65;
 <body>
 
 <div>
-<img alt="error" src="../resources/img/error.png"> <br/>
+<img alt="error" src="http://localhost:9100/coffeen/_coffee/img/error.png"> <br/>
 	<div id="error-text">
 		죄송합니다. <br/>
 		요청 처리 과정에서 에러가 발생하였습니다.<br/>

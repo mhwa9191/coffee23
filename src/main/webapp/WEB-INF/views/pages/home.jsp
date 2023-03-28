@@ -5,11 +5,11 @@
 <html>
 <head>
 	<title>Home</title>
-	<link rel="stylesheet" href="./resources/css/homeStyle.css">
+	<link rel="stylesheet" href="http://localhost:9100/coffeen/_coffee/css/homeStyle.css">
 </head>
 <body id="home-body">
 
-<jsp:include page="/WEB-INF/views/header.jsp"></jsp:include>
+<jsp:include page="/WEB-INF/views/layout/header.jsp"></jsp:include>
 
 
 

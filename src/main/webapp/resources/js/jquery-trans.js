@@ -85,7 +85,7 @@ function check_id_pw(){
 					alert("아이디비밀번호를확인하세요");
 					window.location.href="../member/loginJoinForm";
 				}else if(result==1){ 
-					alert("로그인성공");
+					//alert("로그인성공");
 					window.location.href="../"; //로그인성공시 메인페이지로이동
 				}
 			},
@@ -94,6 +94,14 @@ function check_id_pw(){
 		            alert("로그인에 실패하셨습니다.");
 		    }
 		});
-	}
-	
+	}	
+}
+
+//뒤로가기로 진입
+window.onpageshow = function(event) {
+	if (event.persisted || (window.performance && window.performance.navigation.type == 2) || event.originalEvent && event.originalEvent.persisted) {
+	// Back Forward Cache로 브라우저가 로딩될 경우 혹은 브라우저 뒤로가기 했을 경우
+//    alert("Back!");
+    location.href="../";
+  }
 }

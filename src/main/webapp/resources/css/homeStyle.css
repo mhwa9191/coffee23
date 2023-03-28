@@ -7,17 +7,20 @@
 	color: #A84448;
 	display: flex;
 	border-radius: 5px;
+	width: 100%;
 }
-.main-header-title{width: 88%;}
-.main-header-title > h3{text-align: center;}
+.main-header-title{float:left; margin: 20px 10px; width: 80%;}
 .main-header-title-member, .main-header-title-member_in {
-	margin: 5px 5px;
+	margin: 20px 10px 0 1px;
 }
-a{text-decoration: none; color: #7A3E65; vertical-align: middle;}
+li{display: inline-block; float: left;}
+a{text-decoration: none; color: #7A3E65; padding: 19px 10px 21px;}
 a:hover{color: #3f3f3f; font-weight: bold;}
 a::visited{color: #7A3E65;}
 
 .main-header-title-member_in img{
 	width: 30px;
-	margin: 10px 5px;
+	margin-left: 5px;
+	float: right;
+	vertical-align: bottom;
 }
