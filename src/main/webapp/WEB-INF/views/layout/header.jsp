@@ -25,10 +25,16 @@
 	<ul class="main-header-title-member_in">
 		<li><a href="/coffeen/member/logout">LogOut</a></li>
 		<li><a href="/coffeen/member/myPage">
-			<img alt="member-flaticon" src="http://localhost:9100/coffeen/_coffee/img/loginjoin/user.png" >
-		</a></li>
+			<img alt="member-flaticon" src="http://localhost:9100/coffeen/_coffee/img/loginjoin/user.png" ></a>
+		</li>
+		<!-- admin 계정 접속시 -->
+		<c:if test="${sessionScope.loginid eq 'admin'}">
+		<li><a href="/coffeen/admin/adminIntro">admin</a></li>
+		</c:if>
 	</ul>
-	</c:if>
+		</c:if>
+		
+		
 </div>
 
 </body>
