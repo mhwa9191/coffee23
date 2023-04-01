@@ -1,0 +1,11 @@
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tech.coffeen.dao.OrderDetail">
+	<!-- 주문상세 차트 -->
+	<select id="orddChartList" resultType="com.tech.coffeen.dto.OrderDetailDto">
+		SELECT P_NO,SUM(ORDD_CNT) SUMCNT FROM ORDERDETAIL GROUP BY P_NO ORDER BY P_NO ASC
+	</select>
+	
+</mapper>

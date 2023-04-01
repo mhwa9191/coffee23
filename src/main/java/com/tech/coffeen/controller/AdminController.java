@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.tech.coffeen.admin.AdminChartService;
 import com.tech.coffeen.service.CoffeeServiceInerface;
 
 @Controller
@@ -28,6 +29,10 @@ public class AdminController {
 		//System.out.println("adminintro---");
 		
 		model.addAttribute("request", request);
+		
+		coffeeServiceInerface=new AdminChartService(sqlSession);
+		coffeeServiceInerface.execute(model);
+		
 		return "/admin/adminIntro";
 	}
 	

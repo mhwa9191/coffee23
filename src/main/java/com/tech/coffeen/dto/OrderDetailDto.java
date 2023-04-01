@@ -12,6 +12,8 @@ public class OrderDetailDto {
 	private String p_no; //상품번호
 	private int ordd_cnt; //주문수량
 	
+	private int sumcnt;// 주문상세 차트
+	
 	public OrderDetailDto() {
 		// TODO Auto-generated constructor stub
 	}
