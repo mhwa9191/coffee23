@@ -18,7 +18,7 @@ public class AdminChartService implements CoffeeServiceInerface{
 
 	@Override
 	public void execute(Model model) {
-		System.out.println("AdminChartService--**--*");
+//		System.out.println("AdminChartService--**--*");
 		
 //		Map<String , Object> map=model.asMap();
 //		HttpServletRequest request=
