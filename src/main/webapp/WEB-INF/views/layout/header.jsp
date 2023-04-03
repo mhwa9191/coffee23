@@ -29,7 +29,7 @@
 		</li>
 		<!-- admin 계정 접속시 -->
 		<c:if test="${sessionScope.loginid eq 'admin'}">
-		<li><a href="/coffeen/admin/adminIntro">admin</a></li>
+		<li><a href="/coffeen/admin/intro">admin</a></li>
 		</c:if>
 	</ul>
 		</c:if>

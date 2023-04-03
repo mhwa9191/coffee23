@@ -1,4 +1,4 @@
-package com.tech.coffeen.member;
+package com.tech.coffeen.service.member;
 
 import java.util.Map;
 

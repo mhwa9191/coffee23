@@ -1,0 +1,47 @@
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tech.coffeen.dao.Admin">
+	<!-- 상품관리리스트 -->
+	<sql id="includelist">
+		<choose>
+		    <when test="param5==1">
+		       ORDER BY P_PRICE DESC
+		    </when>
+		    <when test="param5==2">
+		       ORDER BY P_PRICE ASC
+		    </when>
+		    <when test="param5==0">
+		      
+		    </when>
+		    <otherwise>
+		 
+		    </otherwise>
+		</choose>			
+	</sql>
+	<select id="prdList" resultType="com.tech.coffeen.dto.ProductDto">    
+		SELECT 
+			* 
+		FROM 
+		    (SELECT ROWNUM NUM,P.* FROM 
+		    (SELECT ROWNUM RNUM, P.* FROM PRODUCT P WHERE P_NAME LIKE '%'||#{param3}||'%' AND P_SIZE LIKE '%'||#{param4}||'%'
+		    <include refid="includelist"/>
+		    ) P)
+		WHERE
+		    NUM BETWEEN #{param1} AND #{param2}	    
+	</select>
+	<!-- 상품관리 리스트 페이지 -->
+	<select id="selectAdminTotCount" resultType="Integer">
+		SELECT COUNT(*) FROM PRODUCT WHERE P_NAME LIKE '%'||#{param1}||'%' AND P_SIZE LIKE '%'||#{param2}||'%' 
+	</select>
+	
+	<!-- 상품등록 -->
+	<insert id="productInsert">
+		INSERT INTO PRODUCT(P_NO,P_NAME,P_PRICE,P_CNT,P_COLOR,
+		P_SIZE,P_FILESRC,P_DATE,P_CATEGORY,P_INFO)
+		VALUES(PNO_SEQ.NEXTVAL,#{param1},#{param2},#{param3},#{param4},
+		#{param5},#{param6},SYSDATE,#{param7},#{param8})
+	</insert>
+
+</mapper>

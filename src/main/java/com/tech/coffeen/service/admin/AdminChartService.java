@@ -1,4 +1,4 @@
-package com.tech.coffeen.admin;
+package com.tech.coffeen.service.admin;
 
 import java.util.List;
 

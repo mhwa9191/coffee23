@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.tech.coffeen.crypt.CryptoUtil;
-import com.tech.coffeen.member.JoinService;
-import com.tech.coffeen.member.LogOutService;
-import com.tech.coffeen.member.LoginService;
 import com.tech.coffeen.service.CoffeeServiceInerface;
+import com.tech.coffeen.service.member.JoinService;
+import com.tech.coffeen.service.member.LogOutService;
+import com.tech.coffeen.service.member.LoginService;
 
 
 @Controller

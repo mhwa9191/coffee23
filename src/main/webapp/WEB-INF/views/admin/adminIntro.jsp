@@ -20,6 +20,10 @@
 		<canvas id="myChartOne" width="500" height="400"></canvas>
 	</div>
 
+<!-- 상품등록란으로 -->
+<div>
+	<a href="/coffeen/admin/productList">상품</a>
+</div>
 
 <!-- 차트 -->
 <script type="text/javascript">
