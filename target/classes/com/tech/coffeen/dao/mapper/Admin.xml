@@ -29,7 +29,8 @@
 		    <include refid="includelist"/>
 		    ) P)
 		WHERE
-		    NUM BETWEEN #{param1} AND #{param2}	    
+		    NUM BETWEEN #{param1} AND #{param2}
+		ORDER BY P_NO	    
 	</select>
 	<!-- 상품관리 리스트 페이지 -->
 	<select id="selectAdminTotCount" resultType="Integer">
@@ -43,5 +44,8 @@
 		VALUES(PNO_SEQ.NEXTVAL,#{param1},#{param2},#{param3},#{param4},
 		#{param5},#{param6},SYSDATE,#{param7},#{param8})
 	</insert>
-
+	<!-- 선택한 체크박스 삭제  -->
+	<delete id="Checkdelete">
+		DELETE PRODUCT WHERE P_NO=#{param1}
+	</delete>
 </mapper>

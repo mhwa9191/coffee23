@@ -23,7 +23,7 @@ public class APrdListService implements CoffeeServiceInerface{
 
 	@Override
 	public void execute(Model model) {
-		System.out.println("APrdListService--**--*");
+//		System.out.println("APrdListService--**--*");
 		
 		Map<String ,Object> map=model.asMap();
 		HttpServletRequest request=

@@ -13,4 +13,6 @@ public interface Admin {
 //	상품등록
 	public void productInsert(String p_name, String p_price, String p_cnt, String p_color,
 			String p_size, String p_filesrc, String p_category, String p_info);
+//	체크상품삭제
+	public void Checkdelete(String str);
 }

@@ -18,3 +18,28 @@ function prdInsertcheck() {
 		return true;
 	}
 }
+
+// 관리자 상품등록란 상품삭제
+//check된 상품 삭제 	
+function productDelete() {
+	var checkBoxArr = []; 
+	  $("input:checkbox[name='checkbox']:checked").each(function() {
+	  checkBoxArr.push($(this).val());     // 체크된 것만 값을 뽑아서 배열에 push
+	  console.log(checkBoxArr);
+	})
+	$.ajax({
+		type : "POST",
+		url :'adminProductDelete',
+		data : {
+			checkBoxArr : checkBoxArr
+		},
+		success : function(result){
+			location.reload();
+			console.log(result);
+			alert(result+"개 삭제완료")
+		},
+		error : function(xhr, status, error) {
+			alert(error);
+		}
+	});
+}

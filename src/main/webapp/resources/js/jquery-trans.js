@@ -82,8 +82,8 @@ function check_id_pw(){
 			 success:function(result){
 //						alert("ajax 값확인"+result);
 				if(result==0){ 
-					alert("아이디비밀번호를확인하세요");
-					window.location.href="../member/loginJoinForm";
+					alert("아이디비밀번호를 확인하세요");
+					window.location.href="../member/loginJoin";
 				}else if(result==1){ 
 					//alert("로그인성공");
 					window.location.href="../"; //로그인성공시 메인페이지로이동
