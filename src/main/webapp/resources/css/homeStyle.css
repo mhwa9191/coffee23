@@ -14,9 +14,9 @@
 	margin: 20px 10px 0 1px;
 }
 li{display: inline-block; float: left;}
-a{text-decoration: none; color: #7A3E65; padding: 19px 10px 21px;}
-a:hover{color: #3f3f3f; font-weight: bold;}
-a::visited{color: #7A3E65;}
+.main-header a{text-decoration: none; color: #7A3E65; padding: 19px 10px 21px;}
+.main-header a:hover{color: #3f3f3f; font-weight: bold;}
+.main-header a::visited{color: #7A3E65;}
 
 .main-header-title-member_in img{
 	width: 30px;
